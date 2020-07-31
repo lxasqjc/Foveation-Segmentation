@@ -1,0 +1,4 @@
+{"fpath_img": "land-train/28689_sat.jpg", "fpath_segm": "land_train_gt_processed/28689_label.png", "width": 2448, "height": 2448}
+{"fpath_img": "land-train/321711_sat.jpg", "fpath_segm": "land_train_gt_processed/321711_label.png", "width": 2448, "height": 2448}
+{"fpath_img": "land-train/799523_sat.jpg", "fpath_segm": "land_train_gt_processed/799523_label.png", "width": 2448, "height": 2448}
+{"fpath_img": "land-train/586806_sat.jpg", "fpath_segm": "land_train_gt_processed/586806_label.png", "width": 2448, "height": 2448}

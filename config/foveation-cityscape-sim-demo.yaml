@@ -1,0 +1,66 @@
+DATASET:
+  root_dataset: "./data/"
+  list_train: "./data/CITYSCAPE_single_example/train1_validation_cityscape.odgt"
+  list_val: "./data/CITYSCAPE_single_example/val1_validation_cityscape.odgt"
+  num_class: 19
+  imgSizes: (2048, )
+  imgMaxSize: 2048
+  padding_constant: 32
+  segm_downsampling_rate: 4
+  random_flip: "Flip"
+
+MODEL:
+  arch_encoder: "hrnetv2"
+  arch_decoder: "c1"
+  fc_dim: 720
+  foveation: True
+  hard_fov: False
+  hard_grad: "st_inv"
+  hard_fov_pred: False
+  fov_padding: True
+  deep_fov: ""
+  in_dim: 3
+  fov_map_scale: 16
+  patch_bank: '[512, 640, 768, 896, 1024]'
+  one_hot_patch: []
+  pre_cropped: False
+  cropped_lists: []
+
+TRAIN:
+  auto_batch: 'manual'
+  batch_size_per_gpu: 1
+  fov_location_step: 4
+  auto_fov_location_step: False
+  sync_location: 'mean_mbs'
+  mini_batch_size: 2
+  num_epoch: 50
+  start_epoch: 0
+  epoch_iters: 1
+  optim: "adam"
+  lr_encoder: 2e-5
+  lr_decoder: 2e-5
+  lr_foveater: 2e-5
+  lr_pow: 0.9
+  beta1: 0.9
+  weight_decay: 1e-4
+  weight_decay_fov: 1e-4
+  deep_sup_scale: 0.4
+  fix_bn: False
+  workers: 16
+  disp_iter: 20
+  seed: 304
+  save_checkpoint: True
+
+VAL:
+  visualize: False
+  checkpoint: "epoch_last.pth"
+  hard_max_fov: False
+  max_score: False
+  central_crop: False
+  F_Xlr_low_scale: 512
+
+TEST:
+  checkpoint: "epoch_50.pth"
+  result: "./"
+
+DIR: "ckpt/Cityscape_fov_simple_demo"

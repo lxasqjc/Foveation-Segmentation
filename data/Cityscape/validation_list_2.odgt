@@ -1,0 +1,2 @@
+{"fpath_img": "images/validation/lindau_000052_000019_leftImg8bit_cropped_5000_x_0_y_0.png", "fpath_segm": "annotations/validation/lindau_000052_000019_gtFine_labelIds_cropped_5000_x_0_y_0.png", "width": 2048, "height": 1024}
+{"fpath_img": "images/validation/munster_000144_000019_leftImg8bit_cropped_5000_x_0_y_0.png", "fpath_segm": "annotations/validation/munster_000144_000019_gtFine_labelIds_cropped_5000_x_0_y_0.png", "width": 2048, "height": 1024}

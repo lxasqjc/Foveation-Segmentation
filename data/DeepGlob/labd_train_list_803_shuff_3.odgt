@@ -1,0 +1,3 @@
+{"fpath_img": "land-train/901715_sat.jpg", "fpath_segm": "land_train_gt_processed/901715_label.png", "width": 2448, "height": 2448}
+{"fpath_img": "land-train/2334_sat.jpg", "fpath_segm": "land_train_gt_processed/2334_label.png", "width": 2448, "height": 2448}
+{"fpath_img": "land-train/185522_sat.jpg", "fpath_segm": "land_train_gt_processed/185522_label.png", "width": 2448, "height": 2448}

@@ -1,0 +1,12 @@
+numpy
+scipy
+torch
+torchvision
+opencv-python
+yacs
+tqdm
+PyYAML
+tqdm
+pandas
+albumentations
+tensorboard
