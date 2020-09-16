@@ -288,7 +288,8 @@ def train(segmentation_module, iterator, optimizers, epoch, cfg, history=None, f
 
         # calculate accuracy, and display
         if i % cfg.TRAIN.disp_iter == 0:
-            print('iter {}: bp at random retained location {}/{}, xi={}, yi={}'.format(i, rand_location, cfg.TRAIN.fov_location_step, xi, yi))
+            if cfg.MODEL.foveation:
+                print('iter {}: bp at random retained location {}/{}, xi={}, yi={}'.format(i, rand_location, cfg.TRAIN.fov_location_step, xi, yi))
             print('Epoch: [{}][{}/{}], Time: {:.2f}, Data: {:.2f}, '
                   'lr_encoder: {:.6f}, lr_decoder: {:.6f}, '
                   'Accuracy: {:4.2f}, Loss: {:.6f}'
