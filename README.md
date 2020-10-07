@@ -231,7 +231,7 @@ Ours-GSM | 62.1 | 75.1 | 80.8 | 60.8 | 92.8 | 53.4 | 74.8 | 42.6 | 52.9 | 76.6 |
 | Baseline-Random | 64.9 | 72.2 | 58.6 | 63.8 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
 | Baseline-Average | 65.7 | 78.8 | 52.2 | 66.0 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
 | Ensemble  |  71.0 | 80.8 |  **65.4** |  66.9 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
-| Ours-Mean  |  **71.1** |  **82.4** | 63.0 |  **67.8** |  [OneDrive]()/[BaiduYun(Access Code:123)]() |
+| Ours-Mean  |  **71.1** |  **82.4** | 63.0 |  **67.8** |  [OneDrive](https://liveuclac-my.sharepoint.com/:f:/g/personal/ucaccji_ucl_ac_uk/EjYA0ye4ufBDlz6bhMBsRxwBEef7zxHflJvLnkIuQQ3uZA?e=toMvN7)/[BaiduYun(Access Code:123)]() |
 | Ours-Mode | 69.5 |  81.6 | 61.3 | 65.6 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
 | Ours-GSM | 67.4 | 79.4 | 58.3 | 64.4 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
 | [Clinical experts](https://gleason2019.grand-challenge.org/) | 66.9 | 83.9 | 56.4 | 60.3 | [OneDrive]()/[BaiduYun(Access Code:123)]() |
