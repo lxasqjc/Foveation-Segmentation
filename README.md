@@ -19,6 +19,7 @@ This is a PyTorch implementation of [Foveation for Segmentation of Ultra-High Re
 1. [Acknowledgements](#acknowledgements)
 
 ## Updates
+- MICCAI 2020 talk on youtube [HERE](https://youtu.be/MxaO9DtNeEQ)
 - Pre-processed Gleason2019 datasets is shared [HERE](https://liveuclac-my.sharepoint.com/:f:/g/personal/ucaccji_ucl_ac_uk/EjEx-QVxTrpKsha3JoyAAa8ByZe2zU69K_youFo53OQnzg?e=OiRXCU)
 - We use configuration files to store most options which were in argument parser. The definitions of options are detailed in ```config/defaults.py``` (TO-BE-UPDATED).
 
