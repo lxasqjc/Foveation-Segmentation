@@ -160,7 +160,7 @@ A Simple-Demo segmentation example is given as follows:
 python3 train_sim_demo.py
 ```
 3. implement foveation module to your own code following ```train_sim_demo.py```, includes:
-* import our libs (WILL-BE-SIMPLIFIED):
+* import our libs:
 ```bash
 from config import cfg
 from dataset import TrainDataset, b_imresize
