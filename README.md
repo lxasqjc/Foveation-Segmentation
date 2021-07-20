@@ -65,7 +65,7 @@ python -m pip install -r requirements.txt
 conda env create -f environment.yml
 conda activate Fov_Seg
 ```
-This code was tested with python 3.7 and pytorch 1.2  
+This code was tested with python 3.7, pytorch 1.2 and CUDA 11.0 
 
 ## Code Summary
 We provide below three ways for users to easily run/deploy **Foveation Segmentation**: [Direct-Executable](#direct-executable), [Deploy-Your-Model](#deploy-your-model) and [Deploy-Foveation-Module-Locally](#deploy-foveation-module-locally).
