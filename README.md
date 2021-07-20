@@ -19,6 +19,7 @@ This is a PyTorch implementation of [Foveation for Segmentation of Ultra-High Re
 1. [Acknowledgements](#acknowledgements)
 
 ## Updates
+- MICCAI 2020 talk on youtube available [HERE](https://youtu.be/MxaO9DtNeEQ)
 - Pre-processed Gleason2019 datasets is shared [HERE](https://liveuclac-my.sharepoint.com/:f:/g/personal/ucaccji_ucl_ac_uk/EjEx-QVxTrpKsha3JoyAAa8ByZe2zU69K_youFo53OQnzg?e=OiRXCU)
 - We use configuration files to store most options which were in argument parser. The definitions of options are detailed in ```config/defaults.py``` (TO-BE-UPDATED).
 
@@ -159,7 +160,7 @@ A Simple-Demo segmentation example is given as follows:
 python3 train_sim_demo.py
 ```
 3. implement foveation module to your own code following ```train_sim_demo.py```, includes:
-* import our libs (WILL-BE-SIMPLIFIED):
+* import our libs:
 ```bash
 from config import cfg
 from dataset import TrainDataset, b_imresize
