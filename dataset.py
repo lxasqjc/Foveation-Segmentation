@@ -290,7 +290,7 @@ class BaseDataset(torch.utils.data.Dataset):
         if opt.root_dataset == '/scratch0/chenjin/GLEASON2019_DATA/Data/' or \
         opt.root_dataset == '/home/chenjin/Chen_UCL/Histo-MRI-mapping/GLEASON2019_DATA/Data/' or \
         opt.root_dataset == '/SAN/medic/Histo_MRI_GPU/chenjin/Data/GLEASON2019_DATA/Data/' or \
-        'GLEASON2019_DATA' in opt.root_dataset:
+        'GLEASON2019_DATA' in opt.root_dataset or 'Gleason' in opt.root_dataset:
             # four class mapping
             if opt.class_mapping == 0:
                 self.label_mapping = {0: 1,

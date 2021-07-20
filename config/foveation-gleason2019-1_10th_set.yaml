@@ -1,0 +1,67 @@
+DATASET:
+  root_dataset: "data/Gleason2019/"
+  list_train: "./data/Gleason2019/rand_list_gleason2019_central4400crop_train25.odgt"
+  list_val: "./data/Gleason2019/rand_list_gleason2019_central4400crop_val5.odgt"
+  num_class: 4
+  class_mapping: 0
+  imgSizes: (4400, )
+  imgMaxSize: 4400
+  padding_constant: 4
+  segm_downsampling_rate: 4
+  random_flip: "Flip"
+
+MODEL:
+  arch_encoder: "hrnetv2"
+  arch_decoder: "c1"
+  fc_dim: 720
+  foveation: True
+  hard_fov: False
+  hard_grad: "st_inv"
+  hard_fov_pred: False
+  fov_padding: True
+  deep_fov: ""
+  in_dim: 3
+  fov_map_scale: 44
+  patch_bank: [1000, 2000, 4000]
+  one_hot_patch: []
+  pre_cropped: False
+  cropped_lists: []
+
+TRAIN:
+  auto_batch: 'manual'
+  batch_size_per_gpu: 1
+  fov_location_step: 16
+  auto_fov_location_step: False
+  sync_location: 'mean_mbs'
+  mini_batch_size: 1
+  num_epoch: 50
+  start_epoch: 0
+  epoch_iters: 25
+  optim: "adam"
+  lr_encoder: 2e-5
+  lr_decoder: 2e-5
+  lr_foveater: 2e-5
+  lr_pow: 0.9
+  beta1: 0.9
+  weight_decay: 1e-4
+  deep_sup_scale: 0.4
+  fix_bn: False
+  workers: 16
+  disp_iter: 20
+  seed: 304
+  save_checkpoint: True
+  checkpoint_per_epoch: 50
+
+VAL:
+  visualize: False
+  checkpoint: "epoch_last.pth"
+  hard_max_fov: False
+  max_score: False
+  central_crop: False
+  all_F_Xlr_time: True
+
+TEST:
+  checkpoint: "epoch_50.pth"
+  result: "./"
+
+DIR: "ckpt/Foveated_Seg/initial_test_Gleason_train1_val1"

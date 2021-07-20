@@ -305,6 +305,8 @@ def train(segmentation_module, iterator, optimizers, epoch, cfg, history=None, f
             history['train']['acc'].append(ave_acc.average()/100)
             history['train']['print_grad'] = print_grad
 
+        return ave_acc.average(), ave_total_loss.average()
+
 
 def checkpoint(nets, cfg, epoch):
     print('Saving checkpoints...')
@@ -641,7 +643,7 @@ def main(cfg, gpus):
 
     for epoch in range(cfg.TRAIN.start_epoch, cfg.TRAIN.num_epoch):
         if cfg.MODEL.foveation:
-            train(segmentation_module, iterator_train, optimizers, epoch+1, cfg, history, foveation_module)
+            train_acc, train_loss = train(segmentation_module, iterator_train, optimizers, epoch+1, cfg, history, foveation_module)
             if history['train']['print_grad'] is not None and type(history['train']['print_grad']) is not torch.Tensor:
                 if history['train']['print_grad']['layer1_grad'] is not None and history['train']['print_grad']['layer1_grad'][history['train']['print_grad']['layer1_grad']>0].numel() > 0:
                     writer.add_histogram('Print non-zero gradient (layer1) histogram', history['train']['print_grad']['layer1_grad'][history['train']['print_grad']['layer1_grad']>0], epoch+1)
@@ -660,7 +662,7 @@ def main(cfg, gpus):
                     writer.add_image('Print_grad_Fov_softmax_layer3(normalized_b0_p0)', (history['train']['print_grad']['layer3_grad'][0][0]-history['train']['print_grad']['layer3_grad'][0][0].min())/(history['train']['print_grad']['layer3_grad'][0][0].max()-history['train']['print_grad']['layer3_grad'][0][0].min()), epoch+1, dataformats='HW')
 
         else:
-            train(segmentation_module, iterator_train, optimizers, epoch+1, cfg, history)
+            train_acc, train_loss = train(segmentation_module, iterator_train, optimizers, epoch+1, cfg, history)
         # checkpointing
 
         if (epoch+1) % cfg.TRAIN.checkpoint_per_epoch == 0:
