@@ -404,6 +404,17 @@ class BaseDataset(torch.utils.data.Dataset):
                 # gleason2019 322 train mean and std applied
                 mean=[0.282, 0.379, 0.408],
                 std=[0.089, 0.101, 0.127])
+        elif 'catshopmask' in opt.list_train:
+            self.label_mapping = {0: 1,
+                                  1: 2, 2: 3,
+                                  3: 4, 4: 5,
+                                  5: 6, 6: 7,
+                                  }
+            # mean and std
+            self.normalize = transforms.Normalize(
+                # gleason2019 322 train mean and std applied
+                mean=[0.5199, 0.4720, 0.4332],
+                std=[0.230, 0.249, 0.263])
         else:
             raise Exception('Unknown root for mapping and normalisation!')
         # parse options
@@ -708,6 +719,9 @@ class TrainDataset(BaseDataset):
                 segm = Image.fromarray(np.add(segm, 1))
             # segm transform, to torch long tensor HxW
             segm = self.segm_transform(segm)
+            print('segm max: {}'.format(segm.max()))
+            print('segm min: {}'.format(segm.min()))
+            print('segm shape: {}'.format(segm.shape))
 
             # put into batch arrays
             batch_images[i][:, :img.shape[1], :img.shape[2]] = img
