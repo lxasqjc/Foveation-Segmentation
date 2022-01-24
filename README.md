@@ -52,6 +52,15 @@ If you use this code for your research, please cite our paper:
     archivePrefix={arXiv},
     primaryClass={cs.CV}
 }
+
+@inproceedings{jin2020foveation,
+  title={Foveation for Segmentation of Mega-Pixel Histology Images},
+  author={Jin, Chen and Tanno, Ryutaro and Xu, Moucheng and Mertzanidou, Thomy and Alexander, Daniel C},
+  booktitle={International Conference on Medical Image Computing and Computer-Assisted Intervention},
+  pages={561--571},
+  year={2020},
+  organization={Springer}
+}
 ```
 
 ## Install dependencies
@@ -65,7 +74,7 @@ python -m pip install -r requirements.txt
 conda env create -f environment.yml
 conda activate Fov_Seg
 ```
-This code was tested with python 3.7, pytorch 1.2 and CUDA 11.0 
+This code was tested with python 3.7, pytorch 1.2 and CUDA 11.0
 
 ## Code Summary
 We provide below three ways for users to easily run/deploy **Foveation Segmentation**: [Direct-Executable](#direct-executable), [Deploy-Your-Model](#deploy-your-model) and [Deploy-Foveation-Module-Locally](#deploy-foveation-module-locally).
