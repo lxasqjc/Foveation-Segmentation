@@ -3,7 +3,7 @@
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
 
 
-This is a PyTorch implementation of [Foveation for Segmentation of Ultra-High Resolution Images](https://arxiv.org/abs/2007.15124v2).
+This is a PyTorch implementation of [Foveation for Segmentation of Ultra-High Resolution Images](https://arxiv.org/abs/2007.15124v2) which extends [our prior publication at MICCAI 2020](https://discovery.ucl.ac.uk/id/eprint/10113531/1/paper1822.pdf).
 
 ### Table of Contents
 1. [Updates](#updates)
